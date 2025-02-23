@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>Project</title>
+        <link rel="stylesheet" href="design.css">
+    </head>
+    <script>
+      function expandBox(selectedId) {
+    let boxes = ["box1", "box2", "box3"];
+    boxes.forEach(boxId => {
+        let box = document.getElementById(boxId);
+        let radioButton = box.querySelector("input[type='radio']");
+        let elements = box.querySelectorAll("select, h5, h6");
+
+        if (boxId === selectedId) {
+            box.className = "boxone";
+            radioButton.checked = true;
+            elements.forEach(element => {
+                element.style.visibility = "visible";
+            });
+
+        } else {
+            // Reset other boxes to normal
+            box.className = "";
+            radioButton.checked = false; // Uncheck other radio buttons
+
+            // Hide all elements in other boxes
+            elements.forEach(element => {
+                element.style.visibility = "hidden";
+            });
+        }
+    });
+}
+
+    </script>
+    <body>
+        <form align="center">
+            <hr>
+            <h2>Bundle & Save</h2>
+                <div id="box1" onclick="expandBox('box1')">
+                    <p id="left">1 Pair</p>
+                    <p id="left1">DKK 195.00</p>
+                    <input type="radio" value="DKK 195.00"> 
+                    <p id="right">50% OFF</p>
+                    <h5 id="size">Size</h5> <h5 id="color">Color</h5> <br>
+                    <h6 id="one">#1 </h6> <select id="select1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                    <select id="select2">
+                        <option value="Red">colour</option>
+                        <option value="Blue">Blue</option>
+                        <option value="White">White</option>
+                        <option value="Green">Green</option>
+                        <option value="Yellow">Yellow</option>
+                    </select><br>
+                    <h6 id="two">#2 </h6> <select id="select3">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                    <select id="select4">
+                        <option value="Red">colour</option>
+                        <option value="Blue">Blue</option>
+                        <option value="White">White</option>
+                        <option value="Green">Green</option>
+                        <option value="Yellow">Yellow</option>
+                    </select>
+                </div>
+                <div id="box2" onclick="expandBox('box2')">
+                    <p id="left">2 Pair
+                        
+                    </p>
+                    <p id="left1">DKK 345.00</p>
+                    <input type="radio" value="DKK 345.00">
+                    <p style="color: hsl(166, 35%, 42%); position: relative; left: 85px; ">Most Popular</p>
+                    <p id="right">40% OFF</p>
+                    <p style="font-size:10px;color:hsl(0, 0%, 75%); text-decoration: line-through; position:relative; bottom:25px">DKK 195.00</p>
+                    <h5 id="size">Size</h5> <h5 id="color">Color</h5> <br>
+                    <h6 id="one">#1  </h6> <select id="select1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                    <select id="select2">
+                        <option value="Red">colour</option>
+                        <option value="Blue">Blue</option>
+                        <option value="White">White</option>
+                        <option value="Green">Green</option>
+                        <option value="Yellow">Yellow</option>
+                    </select><br>
+                    <h6 id="two">#2  </h6> <select id="select3">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                    <select id="select4">
+                        <option value="Red">colour</option>
+                        <option value="Blue">Blue</option>
+                        <option value="White">White</option>
+                        <option value="Green">Green</option>
+                        <option value="Yellow">Yellow</option>
+                    </select>
+                </div>
+                <div id="box3" onclick="expandBox('box3')">
+                    <p id="left">3 Pair</p>
+                    <p id="left1">DKK 195.00</p>
+                    <input type="radio" value="DKK 528.00">
+                    <p id="right">60% OFF</p>
+                    <h5 id="size">Size</h5> <h5 id="color">Color</h5> <br>
+                    <h6 id="one">#1 </h6> <select id="select1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                    <select id="select2">
+                        <option value="Red">colour</option>
+                        <option value="Blue">Blue</option>
+                        <option value="White">White</option>
+                        <option value="Green">Green</option>
+                        <option value="Yellow">Yellow</option>
+                    </select><br>
+                    <h6 id="two">#2 </h6> <select id="select3">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                    <select id="select4">
+                        <option value="Red">colour</option>
+                        <option value="Blue">Blue</option>
+                        <option value="White">White</option>
+                        <option value="Green">Green</option>
+                        <option value="Yellow">Yellow</option>
+                    </select>
+                </div>
+            <div id="box4">
+            <p id="leftb">
+                Free 2 Day Shipping
+            </p>
+            <p id="rightb">
+                Total:<b> DKK 360.00</b>
+            </p>
+            </div>
+            <input type="submit" value="+ Add to Cart">
+        </form>
+    </body>
+</html>
