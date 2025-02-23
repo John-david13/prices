@@ -19,11 +19,8 @@
             });
 
         } else {
-            // Reset other boxes to normal
             box.className = "";
-            radioButton.checked = false; // Uncheck other radio buttons
-
-            // Hide all elements in other boxes
+            radioButton.checked = false;
             elements.forEach(element => {
                 element.style.visibility = "hidden";
             });
